@@ -36,6 +36,8 @@ An MCP (Model Context Protocol) server that connects Claude to your Canvas LMS a
 
 **Analytics** — Course participation, assignment statistics (min/max/median/quartiles), page view data
 
+**Resource Navigation** — Follow external links, resolve module items to content, fetch linked PDFs and documents, extract all URLs from assignments and pages
+
 ## Quick Start
 
 ### 1. Get Your Canvas API Token
@@ -141,6 +143,10 @@ npx canvas-mcp validate
 | `canvas_get_course_analytics_summary` | Course analytics and participation |
 | `canvas_get_assignment_statistics` | Assignment score statistics (min/max/median) |
 | `canvas_get_course_participation` | Student participation breakdown |
+| `canvas_fetch_external_url` | Fetch content from external URLs |
+| `canvas_get_module_item_content` | Resolve a module item to its full content |
+| `canvas_get_full_module_content` | Get all content in a module at once |
+| `canvas_extract_links_from_content` | Extract URLs from assignments/pages |
 
 ## Example Conversations
 
