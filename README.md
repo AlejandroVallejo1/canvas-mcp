@@ -30,6 +30,12 @@ An MCP (Model Context Protocol) server that connects Claude to your Canvas LMS a
 
 **Notifications** — Activity stream, to-do items, unread counts
 
+**Groups** — List groups, view members, browse group categories
+
+**Learning Outcomes** — Outcome groups, outcomes, mastery results
+
+**Analytics** — Course participation, assignment statistics (min/max/median/quartiles), page view data
+
 ## Quick Start
 
 ### 1. Get Your Canvas API Token
@@ -126,6 +132,15 @@ npx canvas-mcp validate
 | `canvas_get_activity_stream` | Get recent notifications |
 | `canvas_get_todo_items` | Get to-do items |
 | `canvas_get_unread_count` | Get unread message count |
+| `canvas_list_groups` | List groups in a course or user's groups |
+| `canvas_get_group_members` | List members of a group |
+| `canvas_list_group_categories` | List group categories in a course |
+| `canvas_list_outcome_groups` | List learning outcome groups |
+| `canvas_list_outcomes` | List learning outcomes |
+| `canvas_get_outcome_results` | Get outcome/mastery results |
+| `canvas_get_course_analytics_summary` | Course analytics and participation |
+| `canvas_get_assignment_statistics` | Assignment score statistics (min/max/median) |
+| `canvas_get_course_participation` | Student participation breakdown |
 
 ## Example Conversations
 

@@ -16,6 +16,9 @@ import { registerDiscussionTools } from './tools/discussions.js';
 import { registerQuizTools } from './tools/quizzes.js';
 import { registerPeopleTools } from './tools/people.js';
 import { registerNotificationTools } from './tools/notifications.js';
+import { registerGroupTools } from './tools/groups.js';
+import { registerOutcomeTools } from './tools/outcomes.js';
+import { registerAnalyticsTools } from './tools/analytics.js';
 
 function getConfig(): { baseUrl: string; token: string } {
   const token = process.env.CANVAS_API_TOKEN;
@@ -72,6 +75,9 @@ async function main() {
   registerQuizTools(server, client);
   registerPeopleTools(server, client);
   registerNotificationTools(server, client);
+  registerGroupTools(server, client);
+  registerOutcomeTools(server, client);
+  registerAnalyticsTools(server, client);
 
   // Connect via stdio transport
   const transport = new StdioServerTransport();
