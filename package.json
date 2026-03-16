@@ -1,0 +1,62 @@
+{
+  "name": "canvas-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Canvas LMS - Access courses, assignments, grades, announcements, messages, files, and more from Claude",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "canvas-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "lint": "eslint src/",
+    "format": "prettier --write 'src/**/*.ts'",
+    "check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "validate": "node dist/validate.js"
+  },
+  "keywords": [
+    "mcp",
+    "canvas",
+    "lms",
+    "education",
+    "claude",
+    "model-context-protocol",
+    "canvas-lms",
+    "instructure"
+  ],
+  "author": "AlejandroVallejo1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlejandroVallejo1/canvas-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlejandroVallejo1/canvas-mcp/issues"
+  },
+  "homepage": "https://github.com/AlejandroVallejo1/canvas-mcp#readme",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "eslint": "^10.0.3",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  }
+}
